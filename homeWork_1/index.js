@@ -1,16 +1,27 @@
 const ERR_MESSAGE = 'Некорректный ввод!';
+const RANGE_ERR_MESSAGE = 'Значение не в диапазоне от 2 до 36';
 
-const isZero = (value) => {
-  return Number(value) === 0;
-};
+const isZero = (value) => Number(value) === 0;
 
 const isValid = (value) => {
   if (value.trim() === '') {
     throw TypeError(ERR_MESSAGE);
   }
 
-  if (!Number.isInteger(Number(value))) {
+  const numerateValue = Number(value);
+
+  if (!numerateValue) {
     throw TypeError(ERR_MESSAGE);
+  }
+
+  if (!Number.isInteger(Math.round(numerateValue))) {
+    throw TypeError(ERR_MESSAGE);
+  }
+};
+
+const isInRange = (value) => {
+  if (value < 2 || value > 36) {
+    throw RangeError(RANGE_ERR_MESSAGE);
   }
 };
 
@@ -19,8 +30,9 @@ function valueInNotation() {
     const value = prompt('Enter value: ');
     isValid(value);
 
-    const notation = prompt('Enter notation from 2 to 32: ');
+    const notation = prompt('Enter notation from 2 to 36: ');
     isValid(notation);
+    isInRange(notation);
     if (isZero(notation)) {
       throw TypeError(ERR_MESSAGE);
     }
