@@ -29,15 +29,13 @@ const isValidValue = (value) => {
 };
 
 class Calculator {
-  static firstVal;
-  static secondVal;
   constructor(firstVal, secondVal) {
     if (!isValidValue(firstVal) || !isValidValue(secondVal)) {
       throw new Error('');
     }
 
-    Calculator.firstVal = firstVal;
-    Calculator.secondVal = secondVal;
+    this.firstVal = firstVal;
+    this.secondVal = secondVal;
   }
 
   setX(value) {
@@ -45,7 +43,7 @@ class Calculator {
       throw new Error('');
     }
 
-    Calculator.firstVal = value;
+    this.firstVal = value;
   }
 
   setY(value) {
@@ -53,25 +51,32 @@ class Calculator {
       throw new Error('');
     }
 
-    Calculator.secondVal = value;
+    this.secondVal = value;
   }
 
-  logSum() {
-    console.log(Calculator.firstVal + Calculator.secondVal);
+  _logSum() {
+    console.log(this.firstVal + this.secondVal);
   }
 
-  logMul() {
-    console.log(Calculator.firstVal * Calculator.secondVal);
+  _logMul() {
+    console.log(this.firstVal * this.secondVal);
   }
 
-  logSub() {
-    console.log(Calculator.firstVal - Calculator.secondVal);
+  _logSub() {
+    console.log(this.firstVal - this.secondVal);
   }
 
-  logDiv() {
-    if (Calculator.secondVal === 0) {
+  _logDiv() {
+    if (this.secondVal === 0) {
       throw new Error('');
     }
-    console.log(Calculator.firstVal / Calculator.secondVal);
+    console.log(this.firstVal / this.secondVal);
   }
+
+
+  logSum = this._logSum.bind(this);
+  logMul = this._logMul.bind(this);
+  logSub = this._logSub.bind(this);
+  logDiv = this._logDiv.bind(this);
 }
+
