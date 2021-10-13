@@ -72,6 +72,7 @@ class Stack {
     }
 
     this.tail = this.tail.prev;
+    this.tail.next = null;
   }
 
   peek() {
@@ -123,7 +124,6 @@ class Stack {
 }
 
 Stack.prototype.getArray = toArray;
-
 class LinkedList {
   constructor() {
     this.head = null;
