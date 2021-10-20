@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet"> 
+  <body class="body">
+    <h1 class="main-header">Sooo, if you can't do it in your mind</h1>
+      <div class="calculator">
+        <input class="calculator__screen" type="text" disabled />
+        <ul class="calculator__buttons">
+          <li class="calculator__button">
+            <button class="button" data-type-of-button="number" type="button" value="7">7</button>
+          </li>
+          <li class="calculator__button">
+            <button class="button" data-type-of-button="number" type="button" value="8">8</button>
+          </li>
+          <li class="calculator__button">
+            <button class="button" data-type-of-button="number" type="button" value="9">9</button>
+          </li>
+          <li class="calculator__button">
+            <button class="button" data-type-of-button="mathOperation" data-math-operation='switchSign' type="button" value="+/-">
+              +/-
+            </button>
+          </li>
+          <li class="calculator__button">
+            <button class="button" data-type-of-button="clearOneSign" type="button" value="->">
+              &#10230;
+            </button>
+          </li>
+          <li class="calculator__button">
+            <button class="button" data-type-of-button="number" type="button" value="4">4</button>
+          </li>
+          <li class="calculator__button">
+            <button class="button" data-type-of-button="number" type="button" value="5">5</button>
+          </li>
+          <li class="calculator__button">
+            <button class="button" data-type-of-button="number" type="button" value="6">6</button>
+          </li>
+          <li class="calculator__button">
+            <button class="button" data-type-of-button="mathOperation" data-math-operation='mul' type="button" value="*">
+              &#215;
+            </button>
+          </li>
+          <li class="calculator__button">
+            <button class="button" data-type-of-button="mathOperation" data-math-operation='div' type="button" value="/">
+              &#247;
+            </button>
+          </li>
+          <li class="calculator__button">
+            <button class="button" data-type-of-button="number" type="button" value="1">1</button>
+          </li>
+          <li class="calculator__button">
+            <button class="button" data-type-of-button="number" type="button" value="2">2</button>
+          </li>
+          <li class="calculator__button">
+            <button class="button" data-type-of-button="number" type="button" value="3">3</button>
+          </li>
+          <li class="calculator__button">
+            <button class="button" data-type-of-button="mathOperation" data-math-operation='sub' type="button" value="4">
+              &#8211;
+            </button>
+          </li>
+          <li class="calculator__button">
+            <button
+              class="button button--clear"
+              data-type-of-button="clear"
+              type="button"
+              value="c"
+            >
+              c
+            </button>
+          </li>
+          <li class="calculator__button">
+            <button class="button" data-type-of-button="number" type="button" value="0">0</button>
+          </li>
+          <li class="calculator__button">
+            <button class="button" data-type-of-button="dot" type="button" value=".">.</button>
+          </li>
+          <li class="calculator__button">
+            <button class="button" data-type-of-button="mathOperation" data-math-operation='sum' type="button" value="+">
+              &#43;
+            </button>
+          </li>
+          <li class="calculator__button calculator__button--long">
+            <button
+              class="button button--long"
+              data-type-of-button="mathOperation" data-math-operation='equal'
+              type="button"
+              value="="
+            >
+              
+&#61;
+            </button>
+          </li>
+        </ul>
+      </div>
+    <script type="module" src="js/index.js"></script>
+  </body>
+</html>

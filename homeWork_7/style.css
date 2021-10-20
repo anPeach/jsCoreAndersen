@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  background-image: url('img/main-background.webp');
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.main-header {
+  color: rgb(110, 172, 133);
+  background-color: rgb(64, 44, 82, 0.6);
+  text-align: center;
+  font-size: 55px;
+  font-family: 'Gloria Hallelujah', cursive;
+  margin-top: 70px;
+  padding: 0 0 10px 0;
+}
+
+.calculator {
+  margin: 5% auto;
+  max-width: 300px;
+  background-color: rgb(129, 107, 143);
+  padding: 30px 15px;
+  border-radius: 10%;
+  border: 3px solid rgb(55, 51, 58);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.calculator__screen {
+  min-height: 50px;
+  min-width: 265px;
+  border-radius: 10%;
+  border: 2px solid rgb(64, 44, 82);
+  margin-bottom: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  background-color: rgb(225, 218, 231);
+  text-align: right;
+  font-size: 20px;
+}
+
+.calculator__buttons {
+  display: grid;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: 45px 45px 45px 45px 45px;
+  grid-template-rows: 45px 45px 45px 45px;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.calculator__button--long {
+  grid-row: 3/5;
+  grid-column: 5;
+}
+
+.button {
+  min-width: 45px;
+  min-height: 45px;
+  background-color: rgb(124, 167, 143);
+  border-radius: 25%;
+  border: 2px solid rgb(57, 66, 61);
+  color: rgb(60, 63, 60);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  font-size: 20px;
+}
+
+.button--long {
+  height: 100%;
+}
+
+.button:hover,
+button:focus {
+  outline: none;
+  border: 2px solid rgb(15, 17, 16);
+  color: rgb(0, 0, 0);
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+    rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.button:active {
+  background-color: rgb(86, 110, 97);
+  border: 2px solid rgb(15, 17, 16);
+  color: rgb(0, 0, 0);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
